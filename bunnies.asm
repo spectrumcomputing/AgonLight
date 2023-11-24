@@ -11,7 +11,7 @@
   .db "MOS",0,1
 
 start:
-  push af
+    push af         ; Push all registers to the stack
   push bc
   push de
   push ix
