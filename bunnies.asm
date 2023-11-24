@@ -1,15 +1,18 @@
 
+; Bunny Rabbits by Peter Jones
+; UDGs taken from Benny Bunny: Litterbugs - https://spectrumcomputing.co.uk/entry/24323/ZX-Spectrum/Benny_Bunny_Litterbugs
 
-; bunnies.asm
+; Assembler directives
   .assume adl=1
   .org $040000
 
   jp start
 
-; 
+; Quark MOS header 
   .align 64
   .db "MOS",0,1
 
+; Code
 start:
   push af         ; Push all registers to the stack
   push bc
