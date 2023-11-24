@@ -15,10 +15,10 @@ start:
   push ix
   push iy
 
-  LD	HL, vdu		; Address of text
-  LD	BC, 0			; Set to 0, so length ignored...
-  LD	A, 0			; Use character in A as delimiter
-  RST.LIS	18h		; This calls a RST in the eZ80 address space
+  LD	HL, vdu	  ; Address of text
+  LD	BC, 0	    ; Set to 0, so length ignored...
+  LD	A, 0      ; Use character in A as delimiter
+  RST.LIS 18h   ; This calls a RST in the eZ80 address space
 
   ld b,13
 loop0:
