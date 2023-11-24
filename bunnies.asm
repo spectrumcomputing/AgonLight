@@ -1,5 +1,5 @@
 
-```
+
 ; bunnies.asm
   .assume adl=1
   .org $040000
@@ -17,10 +17,10 @@ start:
   push ix
   push iy
 
-  LD HL, vdu	  ; Address of text
-  LD BC, 0	    ; Set to 0, so length ignored...
-  LD A, 0       ; Use character in A as delimiter
-  RST.LIS 18h    ; This calls a RST in the eZ80 address space
+  LD HL, vdu
+  LD BC, 0
+  LD A, 0
+  RST.LIS 18h
 
   ld b,13
 loop0:
@@ -64,4 +64,4 @@ loop2:
 
 vdu:
   .db 22,8,23,224,112,154,159,61,93,117,124,56,23,225,8,62,93,157,21,116,119,7,17,5,0
-```
+
