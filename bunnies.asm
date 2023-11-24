@@ -26,10 +26,10 @@ start:
   RST.LIS 18h
 
   ld b,13
-loop0:
+loop0:          ; Outer Loop    
   push bc
   ld b,19
-loop1:
+loop1:          ; First Inner Loop (Top row of bunny)
   LD a,224
   RST.LIL 10h
   LD a,32
@@ -40,7 +40,7 @@ loop1:
   LD a,10
   RST.LIL 10h
   ld b,19
-loop2:
+loop2:          ; First Inner Loop (Second row of bunny)
   LD a,225
   RST.LIL 10h
   LD a,32
@@ -66,5 +66,5 @@ loop2:
   ret
 
 vdu:
-  .db 22,8,23,224,112,154,159,61,93,117,124,56,23,225,8,62,93,157,21,116,119,7,17,5,0
+  .db 22,8,23,224,112,154,159,61,93,117,124,56,23,225,8,62,93,157,21,116,119,7,17,14,0 ;Set screen mode, UDGs, and initial foreground colour
 
