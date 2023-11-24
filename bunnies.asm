@@ -17,9 +17,9 @@ start:
   push ix
   push iy
 
-  LD HL, vdu
-  LD BC, 0
-  LD A, 0
+  LD hl, vdu
+  LD bc, 0
+  LD a, 0
   RST.LIS 18h
 
   ld b,13
@@ -27,30 +27,30 @@ loop0:
   push bc
   ld b,19
 loop1:
-  LD A,224
+  LD a,224
   RST.LIL 10h
-  LD A,32
+  LD a,32
   RST.LIL 10h
   djnz loop1
-  LD A,13
+  LD a,13
   RST.LIL 10h
-  LD A,10
+  LD a,10
   RST.LIL 10h
   ld b,19
 loop2:
-  LD A,225
+  LD a,225
   RST.LIL 10h
-  LD A,32
+  LD a,32
   RST.LIL 10h
   djnz loop2
-  LD A,13
+  LD a,13
   RST.LIL 10h
-  LD A,10
+  LD a,10
   RST.LIL 10h
   pop bc
-  LD A,17
+  LD a,17
   RST.LIS 10h
-  LD A,B
+  LD a,b
   RST.LIS 10h
   djnz loop0
 
